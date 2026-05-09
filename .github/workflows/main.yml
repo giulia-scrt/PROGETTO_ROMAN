@@ -1,0 +1,28 @@
+name: Pipeline
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    
+      # Checkout codice sorgente
+      - uses: actions/checkout@v3
+
+      # Configurazione ambiente Java
+      - uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '11'
+          cache: 'maven'
+
+      # Compilazione
+      - run: mvn clean compile
+
+      # Esecuzione test
+      - run: mvn test
+
+      # Analisi statica
+      - run: mvn package
