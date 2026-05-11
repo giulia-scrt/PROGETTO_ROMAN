@@ -20,9 +20,14 @@ jobs:
 
       # Compilazione
       - run: mvn clean compile
-
+        
       # Esecuzione test
-      - run: mvn test
+      - run: mvn clean test jacoco:report
 
       # Analisi statica
-      - run: mvn package
+      - run: mvn checkstyle:check
+      
+      # Invio risultati a Coveralls
+      - uses: coverallsapp/github-action@1.1.3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
