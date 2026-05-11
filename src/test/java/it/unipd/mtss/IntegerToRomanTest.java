@@ -51,6 +51,21 @@ public class IntegerToRomanTest {
         assertEquals("III", IntegerToRoman.convert(3));
     } //AAA in forma compatta per chiarezza
 
+@Test
+    public void convertNum4ShouldReturnIV() {
+        assertEquals("IV", IntegerToRoman.convert(4));
+    }
+
+@Test
+    public void convertNum5ShouldReturnV() {
+        assertEquals("V", IntegerToRoman.convert(5));
+    }
+
+@Test
+    public void convertNum6ShouldReturnVI() {
+        assertEquals("VI", IntegerToRoman.convert(6));
+    }
+
 
 
 //TEST BOUNDARY//

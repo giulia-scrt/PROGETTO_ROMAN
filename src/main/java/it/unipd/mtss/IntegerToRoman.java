@@ -16,6 +16,9 @@ public class IntegerToRoman {
             }
             return ris;
         }
+		if (number==4) return "IV";
+		if (number==5) return "V";
+		if (number==6) return "VI";
         return "";
     }
 }
