@@ -24,5 +24,10 @@ jobs:
       # Esecuzione test
       - run: mvn clean test jacoco:report coveralls:report
 
+      #Coveralls token
+      - env:
+          COVERALLS_TOKEN: ${{ secrets.COVERALLS_TOKEN }}
+        run: mvn coveralls:report -DrepoToken=$COVERALLS_TOKEN
+
       # Analisi statica
       - run: mvn package
