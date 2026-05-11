@@ -22,7 +22,7 @@ jobs:
       - run: mvn clean compile
 
       # Esecuzione test
-      - run: mvn test
+      - run: mvn clean test jacoco:report coveralls:report
 
       # Analisi statica
       - run: mvn package
