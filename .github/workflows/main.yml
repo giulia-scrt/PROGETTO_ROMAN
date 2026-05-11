@@ -20,14 +20,14 @@ jobs:
 
       # Compilazione
       - run: mvn clean compile
+        
+      # Esecuzione test
+      - run: mvn clean test jacoco:report
 
-       #Coveralls token
+      # Analisi statica
+      - run: mvn checkstyle:check
+      
+      # Invio risultati a Coveralls
       - env:
           COVERALLS_TOKEN: ${{ secrets.COVERALLS_TOKEN }}
         run: mvn coveralls:report -DrepoToken=$COVERALLS_TOKEN
-        
-      # Esecuzione test
-      - run: mvn clean test jacoco:report coveralls:report
-
-      # Analisi statica
-      - run: mvn package
