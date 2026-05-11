@@ -66,6 +66,28 @@ public class IntegerToRomanTest {
         assertEquals("VI", IntegerToRoman.convert(6));
     }
 
+@Test
+    public void convertNum7ShouldReturnVII() {
+        assertEquals("VII", IntegerToRoman.convert(7));
+    }
+
+
+@Test
+    public void convertNum8ShouldReturnVIII() {
+        assertEquals("VIII", IntegerToRoman.convert(8));
+    }
+
+
+@Test
+    public void convertNum9ShouldReturnIX() {
+        assertEquals("IX", IntegerToRoman.convert(9));
+    }
+
+
+@Test
+    public void convertNum10ShouldReturnX() {
+        assertEquals("X", IntegerToRoman.convert(10));
+    }
 
 
 //TEST BOUNDARY//
@@ -97,3 +119,4 @@ public class IntegerToRomanTest {
 //TEST PERFORMANCE (efficiency)//
     
     }
+
