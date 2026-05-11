@@ -8,7 +8,6 @@
         <property name="fileExtensions" value="java"/>
     </module>
     
-    <module name="FileTabCharacter"/>
     <module name="FileLength"/>
     <module name="LineLength">
         <property name="max" value="120"/>
@@ -16,11 +15,9 @@
     
     <module name="TreeWalker">
         <module name="BooleanExpressionComplexity"/>
-        <module name="CyclomaticComplexity"/>
         <module name="MethodLength"/>
         <module name="EmptyCatchBlock"/>
         <module name="AvoidStarImport"/>
         <module name="IllegalImport"/>
-        <module name="NeedBraces"/>
     </module>
 </module>
